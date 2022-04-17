@@ -11,6 +11,8 @@
     >
       {{ destination.name }}
     </router-link>
+    <router-link id="" to="/productlist">ProductList</router-link>
+    <router-link id="" to="/ShoppingCart">ShoppingCart</router-link>
   </div>
 </template>
 <script>
