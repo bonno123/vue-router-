@@ -11,9 +11,8 @@
     <ul v-else>
       <li v-for="product in products">
         <span
-          >{{ product.title }}- {{ product.price }} -{{
-            product.inventory
-          }}</span
+          >{{ product.title }} : {{ $n(product.price, "currency") }} :
+          {{ product.inventory }}</span
         >
         <button @click="addProductToCart(product)">add To Cart</button>
       </li>

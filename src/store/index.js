@@ -9,7 +9,7 @@ const store = createStore({
   },
 
   getters: {
-    //computed properties
+    //these are like computed properties
     availableProducts(state, getters) {
       return state.products.filter((product) => product.inventory > 0);
     },
@@ -31,13 +31,6 @@ const store = createStore({
         0
       );
     },
-    // cartTotal(state, getters) {
-    //   let total = 0;
-    //   getters.cartProducts.foreach((product) => {
-    //     total += product.price * product.quantity;
-    //   });
-    //   return total;
-    // },
   },
 
   actions: {

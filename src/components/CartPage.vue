@@ -2,10 +2,10 @@
   <h2>Cart Items</h2>
   <ul>
     <li v-for="item in cartItems">
-      {{ item.title }}-{{ item.price }}-{{ item.quantity }}
+      {{ item.title }}-{{ $n(item.price, "currency") }}-{{ item.quantity }}
     </li>
   </ul>
-  <p>total: {{ total }}</p>
+  <p>total: {{ $n(total, "currency") }}</p>
   <button @click="$store.dispatch('checkout')">checkout</button>
   <p v-if="$store.state.checkoutStatus">{{ $store.state.checkoutStatus }}</p>
 </template>
